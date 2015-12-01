@@ -11,3 +11,10 @@
 # produced vignettes
 vignettes/*.html
 vignettes/*.pdf
+
+# temp files
+*.~*
+
+# data files
+*.ods
+*.csv

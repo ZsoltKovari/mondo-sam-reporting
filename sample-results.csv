@@ -1,0 +1,97 @@
+Scenario,Tool,Run,Case,Artifact,Phase,Metric,Iteration,Value
+Batch,Local Search,1,ConnectedSegments,1,Read,Time,1,747445805
+Batch,Local Search,1,ConnectedSegments,1,Check,Time,1,294857
+Batch,Local Search,1,ConnectedSegments,1,Check,Matches,1,0
+Batch,Incremental,1,ConnectedSegments,1,Read,Time,1,2548953008
+Batch,Incremental,1,ConnectedSegments,1,Check,Time,1,49877
+Batch,Incremental,1,ConnectedSegments,1,Check,Matches,1,0
+Batch,Local Search,1,PosLength,1,Read,Time,1,658435633
+Batch,Local Search,1,PosLength,1,Check,Time,1,144822
+Batch,Local Search,1,PosLength,1,Check,Matches,1,0
+Batch,Incremental,1,PosLength,1,Read,Time,1,628631535
+Batch,Incremental,1,PosLength,1,Check,Time,1,11209
+Batch,Incremental,1,PosLength,1,Check,Matches,1,0
+Batch,Incremental,1,ConnectedSegments,2,Read,Time,1,666829384
+Batch,Incremental,1,ConnectedSegments,2,Check,Time,1,36174
+Batch,Incremental,1,ConnectedSegments,2,Check,Matches,1,0
+Batch,Local Search,1,ConnectedSegments,2,Read,Time,1,611153477
+Batch,Local Search,1,ConnectedSegments,2,Check,Time,1,129266
+Batch,Local Search,1,ConnectedSegments,2,Check,Matches,1,0
+Batch,Local Search,1,PosLength,2,Read,Time,1,518035009
+Batch,Local Search,1,PosLength,2,Check,Time,1,128178
+Batch,Local Search,1,PosLength,2,Check,Matches,1,0
+Batch,Incremental,1,PosLength,2,Read,Time,1,504066363
+Batch,Incremental,1,PosLength,2,Check,Time,1,13104
+Batch,Incremental,1,PosLength,2,Check,Matches,1,0
+Batch,Incremental,1,ConnectedSegments,4,Read,Time,1,1078026009
+Batch,Incremental,1,ConnectedSegments,4,Check,Time,1,28503
+Batch,Incremental,1,ConnectedSegments,4,Check,Matches,1,0
+Batch,Local Search,1,PosLength,4,Read,Time,1,761424883
+Batch,Local Search,1,PosLength,4,Check,Time,1,158947
+Batch,Local Search,1,PosLength,4,Check,Matches,1,0
+Batch,Local Search,1,ConnectedSegments,4,Read,Time,1,994473908
+Batch,Local Search,1,ConnectedSegments,4,Check,Time,1,92178
+Batch,Local Search,1,ConnectedSegments,4,Check,Matches,1,0
+Batch,Incremental,1,PosLength,4,Read,Time,1,772824460
+Batch,Incremental,1,PosLength,4,Check,Time,1,32629
+Batch,Incremental,1,PosLength,4,Check,Matches,1,0
+Batch,Local Search,1,PosLength,8,Read,Time,1,1169931273
+Batch,Local Search,1,PosLength,8,Check,Time,1,191121
+Batch,Local Search,1,PosLength,8,Check,Matches,1,0
+Batch,Incremental,1,PosLength,8,Read,Time,1,1085668051
+Batch,Incremental,1,PosLength,8,Check,Time,1,48006
+Batch,Incremental,1,PosLength,8,Check,Matches,1,0
+Batch,Incremental,1,ConnectedSegments,8,Read,Time,1,1550169199
+Batch,Incremental,1,ConnectedSegments,8,Check,Time,1,25059
+Batch,Incremental,1,ConnectedSegments,8,Check,Matches,1,0
+Batch,Local Search,1,ConnectedSegments,8,Read,Time,1,1581553736
+Batch,Local Search,1,ConnectedSegments,8,Check,Time,1,182172
+Batch,Local Search,1,ConnectedSegments,8,Check,Matches,1,0
+Batch,Local Search,2,ConnectedSegments,1,Read,Time,1,141059941
+Batch,Local Search,2,ConnectedSegments,1,Check,Time,1,103185
+Batch,Local Search,2,ConnectedSegments,1,Check,Matches,1,0
+Batch,Incremental,2,ConnectedSegments,1,Read,Time,1,206228383
+Batch,Incremental,2,ConnectedSegments,1,Check,Time,1,3456
+Batch,Incremental,2,ConnectedSegments,1,Check,Matches,1,0
+Batch,Incremental,2,PosLength,1,Read,Time,1,129156957
+Batch,Incremental,2,PosLength,1,Check,Time,1,4866
+Batch,Incremental,2,PosLength,1,Check,Matches,1,0
+Batch,Local Search,2,PosLength,1,Read,Time,1,126458022
+Batch,Local Search,2,PosLength,1,Check,Time,1,74358
+Batch,Local Search,2,PosLength,1,Check,Matches,1,0
+Batch,Local Search,2,ConnectedSegments,2,Read,Time,1,225021749
+Batch,Local Search,2,ConnectedSegments,2,Check,Time,1,65179
+Batch,Local Search,2,ConnectedSegments,2,Check,Matches,1,0
+Batch,Incremental,2,ConnectedSegments,2,Read,Time,1,210796840
+Batch,Incremental,2,ConnectedSegments,2,Check,Time,1,3759
+Batch,Incremental,2,ConnectedSegments,2,Check,Matches,1,0
+Batch,Local Search,2,PosLength,2,Read,Time,1,151736750
+Batch,Local Search,2,PosLength,2,Check,Time,1,64216
+Batch,Local Search,2,PosLength,2,Check,Matches,1,0
+Batch,Incremental,2,PosLength,2,Read,Time,1,155031551
+Batch,Incremental,2,PosLength,2,Check,Time,1,4204
+Batch,Incremental,2,PosLength,2,Check,Matches,1,0
+Batch,Incremental,2,PosLength,4,Read,Time,1,386357888
+Batch,Incremental,2,PosLength,4,Check,Time,1,4145
+Batch,Incremental,2,PosLength,4,Check,Matches,1,0
+Batch,Local Search,2,PosLength,4,Read,Time,1,403136441
+Batch,Local Search,2,PosLength,4,Check,Time,1,82562
+Batch,Local Search,2,PosLength,4,Check,Matches,1,0
+Batch,Incremental,2,ConnectedSegments,4,Read,Time,1,480455678
+Batch,Incremental,2,ConnectedSegments,4,Check,Time,1,3663
+Batch,Incremental,2,ConnectedSegments,4,Check,Matches,1,0
+Batch,Local Search,2,ConnectedSegments,4,Read,Time,1,510295749
+Batch,Local Search,2,ConnectedSegments,4,Check,Time,1,58373
+Batch,Local Search,2,ConnectedSegments,4,Check,Matches,1,0
+Batch,Local Search,2,PosLength,8,Read,Time,1,665968124
+Batch,Local Search,2,PosLength,8,Check,Time,1,109037
+Batch,Local Search,2,PosLength,8,Check,Matches,1,0
+Batch,Local Search,2,ConnectedSegments,8,Read,Time,1,791661621
+Batch,Local Search,2,ConnectedSegments,8,Check,Time,1,208707
+Batch,Local Search,2,ConnectedSegments,8,Check,Matches,1,0
+Batch,Incremental,2,PosLength,8,Read,Time,1,624795249
+Batch,Incremental,2,PosLength,8,Check,Time,1,4267
+Batch,Incremental,2,PosLength,8,Check,Matches,1,0
+Batch,Incremental,2,ConnectedSegments,8,Read,Time,1,869752621
+Batch,Incremental,2,ConnectedSegments,8,Check,Time,1,63563
+Batch,Incremental,2,ConnectedSegments,8,Check,Matches,1,0
