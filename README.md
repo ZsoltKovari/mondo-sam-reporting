@@ -21,7 +21,7 @@ On older Ubuntu systems, follow the [Ubuntu Packages for R](https://cran.r-proje
 
 ### Windows
 
-Download and install [R](http://cran.r-project.org/bin/windows/base/) and adjust the system environment variables.
+Install [R](http://cran.r-project.org/bin/windows/base/) and adjust the system environment variables.
 
 In a command prompt with administrator rights, run:
 
