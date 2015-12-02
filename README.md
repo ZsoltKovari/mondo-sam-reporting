@@ -21,9 +21,9 @@ On older Ubuntu systems, follow the [Ubuntu Packages for R](https://cran.r-proje
 
 ### Windows
 
-* Download and install [R](http://cran.r-project.org/bin/windows/base/)
-* Adjust the system environment variables
-* In a command prompt with administrator rights, run:
+Download and install [R](http://cran.r-project.org/bin/windows/base/) and adjust the system environment variables.
+
+In a command prompt with administrator rights, run:
 
 ```bash
 R -f install.R
@@ -55,9 +55,9 @@ The schema attributes are defined in the following list. For each attribute, we 
   * :steam_locomotive: there are usually 5 runs, so the **Run** attribute takes a value between `1` and `5`
 * **Case**
   * defines the benchmark case
-  * :steam_locomotive: the query `PosLength`.
+  * :steam_locomotive: the query `PosLength`
 * **Artifact**
-  * defines the artifact which is used by the benchmark
+  * defines the artifact which used by the benchmark
   * :steam_locomotive: the model size used by the queries and transformations.
 * **Phase**
   * defines the phase of the benchmark
