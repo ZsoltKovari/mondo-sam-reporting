@@ -7,5 +7,6 @@ install:
 - sudo apt-get install -y --force-yes r-base r-base-dev
 - sudo R -f install.R
 script:
-- ./plot.sh
+- ./init.sh
+- ./report.sh
 - ls -al diagrams
