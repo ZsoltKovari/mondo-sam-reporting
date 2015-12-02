@@ -19,3 +19,4 @@ vignettes/*.pdf
 # data files
 *.ods
 *.csv
+.Rproj.user

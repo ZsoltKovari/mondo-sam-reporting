@@ -2,6 +2,12 @@
 # Processes the results file, aggregate the data and transform it to a wide table suited for visualization.
 # The aggregration takes the **average** time required by the individual steps in the phases.
 # For multiple runs, the script takes the **minimum** value.
+#
+# The basic workflow for the script is the following:
+# * load the file from the CSV
+# * convert the data from long table to wide table (better suited for processing)
+# * filter and aggregate the data
+# * convert the data to long table which (better suited for visualization)
 
 library("reshape2")
 library("plyr")
@@ -19,52 +25,37 @@ times$Tool = gsub('_', ' ', times$Tool)
 
 # long table to wide table
 times.wide = dcast(times,
-                   Tool + Artifact + Metric + Scenario + Case + Iteration + Run ~ Phase,
+                   Scenario + Tool + Run + Case + Artifact + Metric ~ Phase,
                    value.var = "Value")
-times.wide
 
 # calculate aggregated values
-derived.times = times.wide
-derived.times$Read.and.Check = derived.times$Read + derived.times$Check
-derived.times$Transformation.and.Recheck = derived.times$Transformation + derived.times$Recheck
+times.derived = times.wide
+times.derived$Read.and.Check = times.derived$Read + times.derived$Check
 
-# summarize along the iterations
-derived.times = ddply(
-  .data = derived.times,
-  .variables = c("Tool", "Size", "MetricName", "Scenario", "CaseName", "RunIndex"),
-  summarize,
-  read = sum(Read, na.rm = TRUE),
-  check = sum(Check, na.rm = TRUE),
-  read.and.check = sum(read.and.check, na.rm = TRUE)
-  #transformation = mean(Transformation),
-  #recheck = mean(Recheck),
-  #transformation.and.recheck = mean(transformation.and.recheck)
+# summarize for each value (along the **Iteration** attribute) using a columnwise function
+times.aggregated.iteration = ddply(
+  .data = times.derived,
+  .variables = c("Scenario", "Tool", "Run", "Case", "Artifact", "Metric"),
+  .fun = colwise(mean)
 )
 
-print(derived.times)
-
-# take the median values from each measurement
-f = median
-derived.times = ddply(
-  .data = derived.times,
-  .variables = c("Tool", "Size", "MetricName", "Scenario", "CaseName"),
-  summarize,
-  read.and.check = median(read.and.check),
-  #transformation.and.recheck = f(transformation.and.recheck),
-  read = median(read),
-  check = median(check)
-  #transformation = f(transformation),
-  #recheck = f(recheck)
+# summarize for each value (along the **Run** attribute) using the fr function
+times.aggregated.runs = ddply(
+  .data = times.aggregated.iteration,
+  .variables = c("Scenario", "Tool", "Case", "Artifact", "Metric"),
+  .fun = colwise(median)
 )
 
 # melt data to
-plottimes = melt(
-  data = derived.times,
-  id.vars = c("Tool", "Size", "Scenario", "CaseName"),
-  measure.vars = c("read", "check","read.and.check"),
-  variable.name = "PhaseName",
+times.plot = melt(
+  data = times.aggregated.runs,
+  id.vars = c("Tool", "Artifact", "Scenario", "Case"),
+  measure.vars = c("Read", "Check", "Read.and.Check"),
+  variable.name = "Phase",
   value.name = "time"
 )
+
+times.plot
 
 # remove the . characters from the phasename
 print(plottimes)
@@ -74,7 +65,6 @@ plottimes$PhaseName = gsub('\\.', ' ', plottimes$PhaseName)
 plottimes = plottimes[!is.na(plottimes$time), ]
 
 
-exit
 
 
 # plottimes.mix = results.transform(results.mix)
