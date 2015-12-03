@@ -14,6 +14,7 @@
 
 library("reshape2")
 library("plyr")
+library("xtable")
 
 source("plot.R")
 
@@ -21,6 +22,11 @@ results = read.csv("results.csv")
 
 # filtering for time values
 times = subset(results, Metric == "time")
+
+times.wide = dcast(times,
+                   Scenario + Tool + Run + Case + Artifact + Metric ~ Phase,
+                   value.var = "Value")
+xtable(times.wide)
 
 # convert nanoseconds to seconds
 times$Value = times$Value / 10^9
