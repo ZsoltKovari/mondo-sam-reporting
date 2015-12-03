@@ -17,5 +17,3 @@ levels.cases = c("PosLength", "SwitchSensor", "RouteSensor", "SwitchSet", "Conne
 benchmark.plot.by.case(plot.times, "Batch", modelsizes, levels.cases, "Read", "read phase")
 benchmark.plot.by.case(plot.times, "Batch", modelsizes, levels.cases, "Check", "check phase")
 benchmark.plot.by.case(plot.times, "Batch", modelsizes, levels.cases, "Read and Check", "read and check phase")
-
-#benchmark.plot(NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
