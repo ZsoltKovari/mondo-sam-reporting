@@ -1,11 +1,16 @@
 library("ggplot2")
 
-benchmark.plot = function(df, scenario, modelsizes, title, facet, scale, ncol, width = 210, height = 297) {
+benchmark.plot = function(df, scenario, artifacts, title, facet, scale, ncol, width = 210, height = 297) {
+  if (ncol > 1) {
+    evens = seq(2, nrow(artifacts), by=2)
+    artifacts = artifacts[-evens, ]
+  }
+  
   # x axis labels
-  modelsizes.scenario = modelsizes[modelsizes$Scenario == scenario, "Triples"]
+  artifacts.scenario = artifacts[artifacts$Scenario == scenario, "Triples"]
 
-  xbreaks = modelsizes[modelsizes$Scenario == scenario, "Artifact"]
-  xlabels = paste(xbreaks, "\n", modelsizes.scenario, sep = "")
+  xbreaks = artifacts[artifacts$Scenario == scenario, "Artifact"]
+  xlabels = paste(xbreaks, "\n", artifacts.scenario, sep = "")
   
   # y axis labels
   ys = -10:10
@@ -31,14 +36,14 @@ benchmark.plot = function(df, scenario, modelsizes, title, facet, scale, ncol, w
   ggsave(file = paste("diagrams/", scenario, "-", plot.filename, ".pdf", sep = ""), width = width, height = height, units = "mm")
 }
 
-benchmark.plot.by.phase = function(df, scenario, modelsizes, levels, case, title, ncol = 2) {
+benchmark.plot.by.phase = function(df, scenario, artifacts, levels, case, title, ncol = 2) {
   df = df[df$Scenario == scenario & df$Case == case, ]
   df$Phase = factor(df$Phase, levels = levels)
-  benchmark.plot(df, scenario, modelsizes, title, "Phase", "free_y", ncol)
+  benchmark.plot(df, scenario, artifacts, title, "Phase", "free_y", ncol)
 }
 
-benchmark.plot.by.case = function(df, scenario, modelsizes, levels, phase, title, ncol = 2) {
+benchmark.plot.by.case = function(df, scenario, artifacts, levels, phase, title, ncol = 2) {
   df = df[df$Scenario == scenario & df$Phase == phase, ]
   df$Case = factor(df$Case, levels = levels)
-  benchmark.plot(df, scenario, modelsizes, title, "Case", "fixed", ncol)
+  benchmark.plot(df, scenario, artifacts, title, "Case", "fixed", ncol)
 }
