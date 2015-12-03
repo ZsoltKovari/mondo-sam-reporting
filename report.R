@@ -10,6 +10,7 @@
 # * convert the data from long table to wide table (better suited for processing)
 # * aggregate the data
 # * convert the data to long table which (better suited for visualization)
+# * draw the plots
 
 library("reshape2")
 library("plyr")
