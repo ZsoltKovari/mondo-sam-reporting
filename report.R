@@ -26,7 +26,7 @@ times = subset(results, Metric == "time")
 times.wide = dcast(times,
                    Scenario + Tool + Run + Case + Artifact + Metric ~ Phase,
                    value.var = "Value")
-xtable(times.wide)
+#xtable(times.wide)
 
 # convert nanoseconds to seconds
 times$Value = times$Value / 10^9
@@ -50,3 +50,5 @@ benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "check", 
 benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "createengine", "create engine phase")
 benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "calculatesearchplan", "calculate search phase")
 
+levels.phases = c("read", "check", "createengine", "calculatesearchplan")
+benchmark.plot.by.phase(times.plot, scenario, modelsizes, levels.phases, "PosLength", "PosLength phases")
