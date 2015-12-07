@@ -38,7 +38,7 @@ benchmark.plot = function(df, scenario, artifacts, title, facet, scale, ncol, wi
   ggsave(file = paste("diagrams/", scenario, "-", plot.filename, ".pdf", sep = ""), width = width, height = height, units = "mm")
 }
 
-benchmark.plot2 = function(df, scenario, artifacts, title, scale, ncol, width = 210, height = 297) {
+benchmark.plot2 = function(df, scenario, artifacts, title, scale, ncol, width = 210, height = 145) {
   if (ncol > 1) {
     evens = seq(2, nrow(artifacts), by=2)
     artifacts = artifacts[-evens, ]
