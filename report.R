@@ -50,5 +50,5 @@ benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "check", 
 benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "createengine", "create engine phase")
 benchmark.plot.by.case(times.plot, scenario, modelsizes, levels.cases, "calculatesearchplan", "calculate search phase")
 
-levels.phases = c("read", "check", "createengine", "calculatesearchplan")
-benchmark.plot.by.phase(times.plot, scenario, modelsizes, levels.phases, "PosLength", "PosLength phases")
+#levels.phases = c("read", "check", "createengine", "calculatesearchplan")
+benchmark.plot.by.phase(times.plot, scenario, modelsizes, "calculatesearchplan", "Calculating search plan")
