@@ -25,7 +25,7 @@ benchmark.plot = function(df, scenario, artifacts, title, facet, scale, ncol, wi
   p = ggplot(df) +
     labs(title = paste(scenario, " scenario, ", title, sep = ""), x = "model size\nnumber of model elements", y = "execution time [s]") +
     geom_point(aes(x = as.factor(Artifact), y = time, col = Tool, shape = Tool), size = 1.5) +
-    geom_line(aes(x = as.factor(Artifact), y = time, col = Tool, group = Tool), size = 0.15) +
+    geom_line(aes(x = as.factor(Artifact), y = time, col = Tool, group = Tool), size = 0.4) +
     scale_shape_manual(values = seq(0,24)) +
     scale_x_discrete(breaks = xbreaks, labels = xlabels) +
     scale_y_log10(breaks = ybreaks, labels = ylabels) +
@@ -61,7 +61,7 @@ benchmark.plot2 = function(df, scenario, artifacts, title, scale, ncol, width = 
   p = ggplot(df) +
     labs(title = paste(scenario, " scenario, ", title, sep = ""), x = "model size\nnumber of model elements", y = "execution time [s]") +
     geom_point(aes(x = as.factor(Artifact), y = time, col = Case, shape = Case), size = 1.5) +
-    geom_line(aes(x = as.factor(Artifact), y = time, col = Case, group = Case), size = 0.15) +
+    geom_line(aes(x = as.factor(Artifact), y = time, col = Case, group = Case), size = 0.4) +
     scale_shape_manual(values = seq(0,24)) +
     scale_x_discrete(breaks = xbreaks, labels = xlabels) +
     scale_y_log10(breaks = ybreaks, labels = ylabels) +
