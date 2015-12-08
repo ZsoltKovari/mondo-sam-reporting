@@ -1,6 +1,6 @@
 library("ggplot2")
 
-benchmark.plot = function(df, scenario, modelsizes, title, facet, scale, ncol, width = 210, height = 297) {
+benchmark.plot = function(df, scenario, modelsizes, title, facet, scale, ncol, width = 210, height = 140) {
   # x axis labels
   modelsizes.scenario = modelsizes[modelsizes$Scenario == scenario, "Triples"]
 
@@ -18,7 +18,7 @@ benchmark.plot = function(df, scenario, modelsizes, title, facet, scale, ncol, w
 
   p = ggplot(df) +
     labs(title = paste(scenario, " scenario, ", title, sep = ""), x = "model size\n#triples", y = "execution time [s]") +
-    geom_point(aes(x = as.factor(Artifact), y = time, col = Tool, shape = Tool), size = 1.5) +
+    geom_point(aes(x = as.factor(Artifact), y = time, col = Tool, shape = Tool), size = 3.0) +
     geom_line(aes(x = as.factor(Artifact), y = time, col = Tool, group = Tool), size = 0.15) +
     scale_shape_manual(values = seq(0,24)) +
     scale_x_discrete(breaks = xbreaks, labels = xlabels) +
