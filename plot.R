@@ -32,6 +32,7 @@ benchmark.plot = function(df, scenario, artifacts, title, facet, scale, ncol, wi
     theme_bw() +
     theme(legend.key = element_blank(), legend.title = element_blank(), legend.position = "bottom") +
     guides(shape = guide_legend(ncol = 2))
+  print(p)
   
   ggsave(file = paste("diagrams/", scenario, "-", plot.filename, ".pdf", sep = ""), width = width, height = height, units = "mm")
 }
