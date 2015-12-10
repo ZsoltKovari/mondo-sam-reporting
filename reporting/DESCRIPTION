@@ -4,7 +4,8 @@ Title: Reporting framework for R
 Version: 0.1
 Date: 2015-12-10
 Author: Zsolt Kovari
-Maintainer: Zsolt Kovari
-Description: 
+Maintainer: Zsolt Kovari <kovari.zsolt91@gmail.com>
+Description: An R library for data visualization.
 License: GPL-3
 LazyData: TRUE
+RoxygenNote: 5.0.1
