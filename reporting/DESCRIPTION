@@ -1,0 +1,10 @@
+Package: reporting
+Type: Package
+Title: Reporting framework for R
+Version: 0.1
+Date: 2015-12-10
+Author: Zsolt Kovari
+Maintainer: Zsolt Kovari
+Description: 
+License: GPL-3
+LazyData: TRUE
